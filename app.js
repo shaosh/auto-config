@@ -101,6 +101,12 @@ var callback = function(err, config, file){
 		if(config.hasOwnProperty('item_filter')){
 			config.item_filter = item_filter;
 		}
+
+		if(config.hasOwnProperty('release') && config.release.any){
+			config.release.any.release_below_cp = 400;
+			config.release.any.release_below_iv = 0.9;
+			config.release.any.logic = 'and';
+		}
 	}
 
 	jsonfile.writeFile(file, config, {spaces: 2}, function(err){
