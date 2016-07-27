@@ -17,6 +17,14 @@ var config1 = '../PokemonGo-Bot/configs/config.json'
 	, config2 = '../PokemonGo-Bot/config.json';
 
 var obj = null;
+var item_filter = {
+	"1": { "keep" : 100 },
+	"101": { "keep" : 10 },
+	"102": { "keep" : 30 },
+	"103": { "keep" : 30 },
+	"201": { "keep" : 30 },
+	"701": { "keep" : 100 }
+};
 
 var main = function(){
 	if(fileExists(config1)){
@@ -88,6 +96,10 @@ var callback = function(err, config, file){
 
 		if(config.hasOwnProperty('walk') && walk){
 			config.walk = walk;
+		}
+
+		if(config.hasOwnProperty('item_filter')){
+			config.item_filter = item_filter;
 		}
 	}
 
