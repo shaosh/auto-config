@@ -103,8 +103,8 @@ var callback = function(err, config, file){
 		}
 
 		if(config.hasOwnProperty('release') && config.release.any){
-			config.release.any.release_below_cp = 0;
-			config.release.any.release_below_iv = 1.0;
+			config.release.any.release_below_cp = 300;
+			config.release.any.release_below_iv = 0.5;
 			config.release.any.logic = 'or';
 		}
 	}
