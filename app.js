@@ -19,10 +19,10 @@ var config1 = '../PokemonGo-Bot/configs/config.json'
 var obj = null;
 var item_filter = {
 	"1": { "keep" : 100 },
-	"101": { "keep" : 10 },
-	"102": { "keep" : 30 },
-	"103": { "keep" : 30 },
-	"201": { "keep" : 30 },
+	"101": { "keep" : 0 },
+	"102": { "keep" : 0 },
+	"103": { "keep" : 0 },
+	"201": { "keep" : 0 },
 	"701": { "keep" : 100 }
 };
 
@@ -103,9 +103,9 @@ var callback = function(err, config, file){
 		}
 
 		if(config.hasOwnProperty('release') && config.release.any){
-			config.release.any.release_below_cp = 400;
-			config.release.any.release_below_iv = 0.9;
-			config.release.any.logic = 'and';
+			config.release.any.release_below_cp = 0;
+			config.release.any.release_below_iv = 1.0;
+			config.release.any.logic = 'or';
 		}
 	}
 
