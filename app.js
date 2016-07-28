@@ -103,9 +103,28 @@ var callback = function(err, config, file){
 		}
 
 		if(config.hasOwnProperty('release') && config.release.any){
-			config.release.any.release_below_cp = 300;
-			config.release.any.release_below_iv = 0.5;
-			config.release.any.logic = 'or';
+			config.release.any = { "release_below_cp": 400, "release_below_iv": 0.8, "logic": "or" };
+			config.release.Lapras =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Moltres =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Zapdos =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Articuno =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Mewtwo =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Dragonite =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Snorlax =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Mew =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Arcanine =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Vaporeon =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Gyarados =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Exeggutor =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Muk =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Weezing =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Flareon =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Growlithe =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Dragonair =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Grimer =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Exeggcute =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Magikarp =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
+			config.release.Eevee =  { "release_below_cp": 0, "release_below_iv": 0, "logic": "or" };
 		}
 	}
 
