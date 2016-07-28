@@ -94,6 +94,12 @@ var callback = function(err, config, file){
 			config.location = location;
 		}
 
+		if(config.hasOwnProperty('mode')){
+			delete config[mode];
+			config.catch_pokemon = true;
+			config.spin_forts = true;
+		}
+
 		if(config.hasOwnProperty('walk') && walk){
 			config.walk = walk;
 		}
