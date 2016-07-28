@@ -95,7 +95,7 @@ var callback = function(err, config, file){
 		}
 
 		if(config.hasOwnProperty('mode')){
-			delete config[mode];
+			delete config['mode'];
 			config.catch_pokemon = true;
 			config.spin_forts = true;
 		}
